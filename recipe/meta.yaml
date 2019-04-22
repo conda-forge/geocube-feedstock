@@ -1,4 +1,4 @@
-{% set version = "0.0.2" %}
+{% set version = "0.0.4" %}
 
 package:
   name: geocube
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/g/geocube/geocube-{{ version }}.tar.gz
-  sha256: ef74e677510ab9ef17bb855d65c187fbd50098a5697effdd4749b9cd5c516d79
+  sha256: 9eb39c84aee0ed7c9fdfadd5b08c05c19518990bb85acd086fa8eb2dc4f493ab
 
 build:
   number: 0
   noarch: python
-  # entry_points:
-  #   - geocube=geocube.cli.geocube:geocube
+  entry_points:
+    - geocube=geocube.cli.geocube:geocube
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -35,8 +35,8 @@ test:
     - geocube.api
     - geocube.geo_utils
     - geocube.xarray_extensions
-  # commands:
-  #   - geocube --help
+  commands:
+    - geocube --help
   requires:
     - mock
     - pytest >=3.6
