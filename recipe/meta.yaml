@@ -9,7 +9,7 @@ source:
   sha256: 9eb39c84aee0ed7c9fdfadd5b08c05c19518990bb85acd086fa8eb2dc4f493ab
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - geocube=geocube.cli.geocube:geocube
