@@ -22,7 +22,7 @@ requirements:
   run:
     - appdirs
     - click >=6.0
-    - datacube >=1.6.2,<1.7
+    - datacube
     - geopandas
     - python
     - rasterio
