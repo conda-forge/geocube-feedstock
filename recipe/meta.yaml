@@ -17,14 +17,14 @@ build:
 
 requirements:
   host:
-    - python
+    - python 3
     - pip
   run:
     - appdirs
     - click >=6.0
     - datacube
     - geopandas
-    - python
+    - python 3
     - rasterio
     - rioxarray
     - xarray
