@@ -1,4 +1,4 @@
-{% set version = "0.0.10" %}
+{% set version = "0.0.11" %}
 
 package:
   name: geocube
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/g/geocube/geocube-{{ version }}.tar.gz
-  sha256: 77b45822b9895b8313e7b12701b78eff426fc59f70e629f334b4f9c3078bea83
+  sha256: 688ea218585695baa063369d3d6307042682e11f8516079cc8e19d22439064f5
 
 build:
   number: 0
@@ -26,8 +26,9 @@ requirements:
     - geopandas
     - python 3
     - rasterio
-    - rioxarray
+    - rioxarray >=0.0.22
     - xarray
+    - pyproj >=2
 
 test:
   imports:
