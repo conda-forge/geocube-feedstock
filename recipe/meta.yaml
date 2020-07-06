@@ -1,4 +1,4 @@
-{% set version = "0.0.12" %}
+{% set version = "0.0.13" %}
 
 package:
   name: geocube
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/g/geocube/geocube-{{ version }}.tar.gz
-  sha256: ceb54f56e7e5b599dcd7e265d55d5f8c488760435969b55b8acc4299b22ae097
+  sha256: 0562b2627cddceb3384e5bf85f6bd7e932b4050a53d6e0279f51330ca2b78ed5
 
 build:
   number: 0
   noarch: python
   entry_points:
     - geocube=geocube.cli.geocube:geocube
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
