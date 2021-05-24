@@ -17,18 +17,18 @@ build:
 
 requirements:
   host:
-    - python 3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - appdirs
     - click >=6.0
     - datacube
     - geopandas >=0.6
     - pyproj >=2
     - rasterio
-    - rioxarray >=0.0.30
-    - xarray
+    - rioxarray >=0.4.0
+    - xarray >=0.17.0
 
 test:
   imports:
