@@ -28,6 +28,7 @@ requirements:
     - pyproj >=2
     - rasterio
     - rioxarray >=0.4.0
+    - scipy
     - xarray >=0.17.0
 
 test:
