@@ -1,4 +1,4 @@
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: geocube
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/g/geocube/geocube-{{ version }}.tar.gz
-  sha256: 22eed07933d7f95f7ab646d0663ae7d21a1fdb8957b3b9b6940832d5a4e17d2e
+  sha256: d4bdc4bdcb47868ddc464abaee61dce0439720b58f8a12f7f39902f0d53159f9
 
 build:
   number: 0
