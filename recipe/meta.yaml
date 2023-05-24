@@ -9,7 +9,7 @@ source:
   sha256: 43c88cd5dd18f9df9561e642b4840e4bd061ccc8a3e8c419378f6707384213d0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - geocube=geocube.cli.geocube:geocube
@@ -23,13 +23,14 @@ requirements:
     - python >=3.9
     - appdirs
     - click >=6.0
+    - geopandas >=0.7
     - odc-geo
-    - geopandas >=0.6
-    - pyproj >=2
     - rasterio
-    - rioxarray >=0.4.0
+    - rioxarray >=0.4
     - scipy
-    - xarray >=0.17.0
+    - xarray >=0.17
+    - pyproj >=2
+    - numpy >=1.20
 
 test:
   imports:
