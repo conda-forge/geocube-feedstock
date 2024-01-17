@@ -1,31 +1,34 @@
-{% set version = "0.4.2" %}
+{% set name = "geocube" %}
+{% set version = "0.4.3" %}
 
 package:
-  name: geocube
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/g/geocube/geocube-{{ version }}.tar.gz
-  sha256: 43c88cd5dd18f9df9561e642b4840e4bd061ccc8a3e8c419378f6707384213d0
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geocube-{{ version }}.tar.gz
+  sha256: d0deebbcd2cd169d466ef8f9e6419c8ee23914d10e00b8f7bd73f9bed468a0fb
 
 build:
-  number: 1
-  noarch: python
   entry_points:
-    - geocube=geocube.cli.geocube:geocube
-  script: {{ PYTHON }} -m pip install . -vv
+    - geocube = geocube.cli.geocube:geocube
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
-    - python >=3.9
+    - python >=3.10
+    - setuptools
+    - wheel
     - pip
   run:
-    - python >=3.9
+    - python >=3.10
     - appdirs
     - click >=6.0
     - geopandas >=0.7
     - odc-geo
-    - rasterio
+    - rasterio >=1.3
     - rioxarray >=0.4
     - scipy
     - xarray >=0.17
