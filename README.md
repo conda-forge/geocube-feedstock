@@ -3,7 +3,7 @@ About geocube-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/geocube-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/corteva/geocube
+Home: http://github.com/vylor/geocube
 
 Package license: BSD-3-Clause
 
