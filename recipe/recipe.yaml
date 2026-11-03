@@ -16,8 +16,9 @@ build:
   number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  entry_points:
-    - geocube = geocube.cli.geocube:geocube
+  python:
+    entry_points:
+      - geocube = geocube.cli.geocube:geocube
 
 requirements:
   host:
