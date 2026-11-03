@@ -18,6 +18,7 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - geocube = geocube.cli.geocube:geocube
+
 requirements:
   host:
     - python ${{ python_min }}.*
@@ -56,3 +57,5 @@ about:
 extra:
   recipe-maintainers:
     - snowman2
+    - ocefpaf
+	
